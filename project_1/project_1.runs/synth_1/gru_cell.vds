@@ -1,0 +1,1129 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Aug 19 11:13:51 2024
+# Process ID: 10484
+# Current directory: /home/jam/Downloads/GRU/project_1/project_1.runs/synth_1
+# Command line: vivado -log gru_cell.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gru_cell.tcl
+# Log file: /home/jam/Downloads/GRU/project_1/project_1.runs/synth_1/gru_cell.vds
+# Journal file: /home/jam/Downloads/GRU/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: jam-Precision-5510, OS: Linux, CPU Frequency: 3319.878 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+source gru_cell.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1380.352 ; gain = 45.836 ; free physical = 7269 ; free virtual = 10875
+Command: read_checkpoint -auto_incremental -incremental /home/jam/Downloads/GRU/project_1/project_1.srcs/utils_1/imports/synth_1/RAM_P.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/jam/Downloads/GRU/project_1/project_1.srcs/utils_1/imports/synth_1/RAM_P.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top gru_cell -part xcu200-fsgd2104-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu200'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu200'
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10525
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1802.910 ; gain = 409.684 ; free physical = 6632 ; free virtual = 10221
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'gru_cell' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/gru_cell.v:25]
+INFO: [Synth 8-6157] synthesizing module 'RAM_P' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/RAM_P.v:23]
+	Parameter AWL bound to: 12 - type: integer 
+	Parameter DWL bound to: 4096 - type: integer 
+INFO: [Synth 8-3876] $readmem data file '/home/jam/Downloads/GRU/project_1/project_1.srcs/weight_matrix.txt' is read successfully [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/RAM_P.v:37]
+INFO: [Synth 8-3876] $readmem data file '/home/jam/Downloads/GRU/project_1/project_1.srcs/gru_bias.txt' is read successfully [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/RAM_P.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_P' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/RAM_P.v:23]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/control_unit.v:24]
+	Parameter EP bound to: 16 - type: integer 
+	Parameter VP bound to: 16 - type: integer 
+	Parameter Rows bound to: 1824 - type: integer 
+	Parameter Columns_i bound to: 96 - type: integer 
+	Parameter Columns_r bound to: 608 - type: integer 
+	Parameter AWL bound to: 12 - type: integer 
+	Parameter gru_size bound to: 608 - type: integer 
+	Parameter time_steps bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/control_unit.v:24]
+INFO: [Synth 8-6157] synthesizing module 'columnwise_mvm' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/columnwise_mvm.v:24]
+	Parameter EP bound to: 16 - type: integer 
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI1_in bound to: 4 - type: integer 
+	Parameter WF1_in bound to: 12 - type: integer 
+	Parameter WI2_in bound to: 4 - type: integer 
+	Parameter WF2_in bound to: 12 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'kernel' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/kernel.v:23]
+	Parameter EP bound to: 16 - type: integer 
+	Parameter WI1_in bound to: 4 - type: integer 
+	Parameter WF1_in bound to: 12 - type: integer 
+	Parameter WI2_in bound to: 4 - type: integer 
+	Parameter WF2_in bound to: 12 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mult' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v:31]
+	Parameter WI1 bound to: 4 - type: integer 
+	Parameter WF1 bound to: 12 - type: integer 
+	Parameter WI2 bound to: 4 - type: integer 
+	Parameter WF2 bound to: 12 - type: integer 
+	Parameter WIO bound to: 8 - type: integer 
+	Parameter WFO bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mult' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v:31]
+INFO: [Synth 8-6157] synthesizing module 'adder' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+	Parameter WI1 bound to: 8 - type: integer 
+	Parameter WF1 bound to: 24 - type: integer 
+	Parameter WI2 bound to: 8 - type: integer 
+	Parameter WF2 bound to: 24 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adder' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+INFO: [Synth 8-6157] synthesizing module 'adder__parameterized0' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+	Parameter WI1 bound to: 8 - type: integer 
+	Parameter WF1 bound to: 24 - type: integer 
+	Parameter WI2 bound to: 10 - type: integer 
+	Parameter WF2 bound to: 22 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:158]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'adder__parameterized0' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+INFO: [Synth 8-6157] synthesizing module 'adder__parameterized1' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 10 - type: integer 
+	Parameter WF2 bound to: 22 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:158]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'adder__parameterized1' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'kernel' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/kernel.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'columnwise_mvm' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/columnwise_mvm.v:24]
+INFO: [Synth 8-6157] synthesizing module 'bias_add' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/bias_add.v:22]
+	Parameter EP bound to: 16 - type: integer 
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 4 - type: integer 
+	Parameter WF2 bound to: 12 - type: integer 
+	Parameter WI_out bound to: 10 - type: integer 
+	Parameter WF_out bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adder__parameterized2' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 4 - type: integer 
+	Parameter WF2 bound to: 12 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:158]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'adder__parameterized2' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'bias_add' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/bias_add.v:22]
+INFO: [Synth 8-6157] synthesizing module 'elementwise_mult' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_mult.v:22]
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WI_out bound to: 10 - type: integer 
+	Parameter WF_out bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mult__parameterized0' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v:31]
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mult__parameterized0' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'elementwise_mult' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_mult.v:22]
+INFO: [Synth 8-6157] synthesizing module 'elementwise_add' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_add.v:24]
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 10 - type: integer 
+	Parameter WF2 bound to: 22 - type: integer 
+	Parameter WI_out bound to: 10 - type: integer 
+	Parameter WF_out bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'elementwise_add' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_add.v:24]
+INFO: [Synth 8-6157] synthesizing module 'activation_function' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/activation_function.v:23]
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI_in bound to: 10 - type: integer 
+	Parameter WF_in bound to: 22 - type: integer 
+	Parameter WI_out bound to: 2 - type: integer 
+	Parameter WF_out bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'PSigmoid' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:21]
+	Parameter WI_in bound to: 10 - type: integer 
+	Parameter WF_in bound to: 22 - type: integer 
+	Parameter WI_out bound to: 2 - type: integer 
+	Parameter WF_out bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'abs' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/abs.v:23]
+	Parameter WL bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'abs' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/abs.v:23]
+INFO: [Synth 8-6157] synthesizing module 'segmentDetector_General' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segmentDetector_General.v:21]
+	Parameter WI_in bound to: 10 - type: integer 
+	Parameter WF_in bound to: 22 - type: integer 
+	Parameter segWI bound to: 3 - type: integer 
+	Parameter segWF bound to: 3 - type: integer 
+	Parameter noSegments bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FixedPoint_Extend_Unsigned' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Extend_Unsigned.v:23]
+	Parameter WI_IN bound to: 3 - type: integer 
+	Parameter WF_IN bound to: 3 - type: integer 
+	Parameter WI_OUT bound to: 10 - type: integer 
+	Parameter WF_OUT bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FixedPoint_Extend_Unsigned' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Extend_Unsigned.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'segmentDetector_General' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segmentDetector_General.v:21]
+INFO: [Synth 8-6157] synthesizing module 'segCoeffROM_tanh' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:21]
+	Parameter NUM_SEGMENTS bound to: 8 - type: integer 
+	Parameter coeffA_WI bound to: 1 - type: integer 
+	Parameter coeffA_WF bound to: 7 - type: integer 
+	Parameter coeffB_WI bound to: 1 - type: integer 
+	Parameter coeffB_WF bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'segCoeffROM_tanh' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:21]
+INFO: [Synth 8-6157] synthesizing module 'segCoeffROM_logsig' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:21]
+	Parameter NUM_SEGMENTS bound to: 8 - type: integer 
+	Parameter coeffA_WI bound to: 1 - type: integer 
+	Parameter coeffA_WF bound to: 7 - type: integer 
+	Parameter coeffB_WI bound to: 1 - type: integer 
+	Parameter coeffB_WF bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'segCoeffROM_logsig' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:21]
+INFO: [Synth 8-6157] synthesizing module 'FixedPoint_Multiplier' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Multiplier.v:29]
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 1 - type: integer 
+	Parameter WF2 bound to: 7 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FixedPoint_Multiplier' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Multiplier.v:29]
+WARNING: [Synth 8-7071] port 'overFlow' of module 'FixedPoint_Multiplier' is unconnected for instance 'CoeffMult' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:82]
+WARNING: [Synth 8-7071] port 'tempOut' of module 'FixedPoint_Multiplier' is unconnected for instance 'CoeffMult' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:82]
+WARNING: [Synth 8-7023] instance 'CoeffMult' of module 'FixedPoint_Multiplier' has 5 connections declared, but only 3 given [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:82]
+INFO: [Synth 8-6157] synthesizing module 'FixedPoint_Adder' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Adder.v:29]
+	Parameter WI1 bound to: 10 - type: integer 
+	Parameter WF1 bound to: 22 - type: integer 
+	Parameter WI2 bound to: 1 - type: integer 
+	Parameter WF2 bound to: 7 - type: integer 
+	Parameter WIO bound to: 2 - type: integer 
+	Parameter WFO bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FixedPoint_Adder' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Adder.v:29]
+WARNING: [Synth 8-7071] port 'overFlow' of module 'FixedPoint_Adder' is unconnected for instance 'CoeffAdder' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:88]
+WARNING: [Synth 8-7023] instance 'CoeffAdder' of module 'FixedPoint_Adder' has 4 connections declared, but only 3 given [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:88]
+INFO: [Synth 8-6157] synthesizing module 'TwosComp' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/TwosComp.v:21]
+	Parameter WL bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TwosComp' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/TwosComp.v:21]
+INFO: [Synth 8-6157] synthesizing module 'FixedPoint_Sub' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v:29]
+	Parameter WI1 bound to: 2 - type: integer 
+	Parameter WF1 bound to: 14 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WIO bound to: 2 - type: integer 
+	Parameter WFO bound to: 14 - type: integer 
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v:159]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v:170]
+INFO: [Synth 8-6155] done synthesizing module 'FixedPoint_Sub' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v:29]
+WARNING: [Synth 8-7071] port 'overFlow' of module 'FixedPoint_Sub' is unconnected for instance 'CoeffSub' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:100]
+WARNING: [Synth 8-7023] instance 'CoeffSub' of module 'FixedPoint_Sub' has 4 connections declared, but only 3 given [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:100]
+INFO: [Synth 8-6155] done synthesizing module 'PSigmoid' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'activation_function' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/activation_function.v:23]
+INFO: [Synth 8-6157] synthesizing module 'elementwise_mult__parameterized0' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_mult.v:22]
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI1 bound to: 4 - type: integer 
+	Parameter WF1 bound to: 12 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WI_out bound to: 10 - type: integer 
+	Parameter WF_out bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mult__parameterized1' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v:31]
+	Parameter WI1 bound to: 4 - type: integer 
+	Parameter WF1 bound to: 12 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mult__parameterized1' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'elementwise_mult__parameterized0' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_mult.v:22]
+INFO: [Synth 8-6157] synthesizing module 'elementwise_sub' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_sub.v:23]
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI1 bound to: 2 - type: integer 
+	Parameter WF1 bound to: 1 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WI_out bound to: 10 - type: integer 
+	Parameter WF_out bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sub' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/sub.v:30]
+	Parameter WI1 bound to: 2 - type: integer 
+	Parameter WF1 bound to: 1 - type: integer 
+	Parameter WI2 bound to: 2 - type: integer 
+	Parameter WF2 bound to: 14 - type: integer 
+	Parameter WIO bound to: 10 - type: integer 
+	Parameter WFO bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sub' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/sub.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'elementwise_sub' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_sub.v:23]
+INFO: [Synth 8-6157] synthesizing module 'elementwise_quant' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_quant.v:23]
+	Parameter VP bound to: 16 - type: integer 
+	Parameter WI_in bound to: 10 - type: integer 
+	Parameter WF_in bound to: 22 - type: integer 
+	Parameter WI_out bound to: 4 - type: integer 
+	Parameter WF_out bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'quant' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/quant.v:24]
+	Parameter WI_in bound to: 10 - type: integer 
+	Parameter WF_in bound to: 22 - type: integer 
+	Parameter WI_out bound to: 4 - type: integer 
+	Parameter WF_out bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'quant' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/quant.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'elementwise_quant' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_quant.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file.v:23]
+	Parameter WD_I bound to: 64 - type: integer 
+	Parameter WD_F bound to: 192 - type: integer 
+	Parameter addresses bound to: 114 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register_file__parameterized0' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file.v:23]
+	Parameter WD_I bound to: 160 - type: integer 
+	Parameter WD_F bound to: 352 - type: integer 
+	Parameter addresses bound to: 38 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file__parameterized0' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file.v:23]
+INFO: [Synth 8-6157] synthesizing module 'register_file_r_z' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file_r_z.v:24]
+	Parameter WD_I bound to: 32 - type: integer 
+	Parameter WD_F bound to: 224 - type: integer 
+	Parameter addresses bound to: 114 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register_file_r_z' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file_r_z.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'gru_cell' (0#1) [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/gru_cell.v:25]
+WARNING: [Synth 8-3848] Net new_line_r_h in module/entity control_unit does not have driver. [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/control_unit.v:25]
+WARNING: [Synth 8-3848] Net new_line_x_h in module/entity control_unit does not have driver. [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/control_unit.v:25]
+WARNING: [Synth 8-7129] Port ra1[31] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[30] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[29] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[28] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[27] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[26] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[25] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[24] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[23] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[22] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[21] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[20] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[19] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[18] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[17] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[16] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[15] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[14] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[13] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[12] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[11] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[10] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[9] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[8] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[7] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[31] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[30] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[29] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[28] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[27] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[26] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[25] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[24] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[23] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[22] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[21] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[20] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[19] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[18] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[17] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[16] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[15] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[14] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[13] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[12] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[11] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[10] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[9] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[8] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra2[7] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[31] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[30] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[29] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[28] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[27] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[26] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[25] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[24] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[23] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[22] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[21] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[20] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[19] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[18] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[17] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[16] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[15] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[14] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[13] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[12] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[11] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[10] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[9] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[8] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra3[7] in module register_file_r_z is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[31] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[30] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[29] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[28] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[27] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[26] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[25] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[24] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[23] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[22] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[21] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[20] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[19] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[18] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[17] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[16] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[15] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[14] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[13] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[12] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[11] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[10] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[9] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[8] in module register_file__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ra1[7] in module register_file__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2262.605 ; gain = 869.379 ; free physical = 6325 ; free virtual = 9914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2262.605 ; gain = 869.379 ; free physical = 6318 ; free virtual = 9907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu200-fsgd2104-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xcu200-fsgd2104-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2282.531 ; gain = 889.305 ; free physical = 6318 ; free virtual = 9906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2282.531 ; gain = 889.305 ; free physical = 6252 ; free virtual = 9849
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2282.531 ; gain = 889.305 ; free physical = 6252 ; free virtual = 9849
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "RAM_P:/RAM_reg"
+INFO: [Common 17-14] Message 'Synth 8-5555' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 9 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 1 for RAM "RAM_P:/RAM_reg"
+INFO: [Synth 8-3971] The signal "RAM_P:/RAM_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-327] inferring latch for variable 'segmentNum_reg' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segmentDetector_General.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'memOut_reg' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[0]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[1]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[2]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[3]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[4]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[5]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[6]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'memOut_reg' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:73]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[0]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[1]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[2]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[3]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[4]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[5]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'coeffROM_reg[6]' [/home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v:61]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:56 ; elapsed = 00:01:48 . Memory (MB): peak = 3164.758 ; gain = 1771.531 ; free physical = 221 ; free virtual = 1198
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : synth_design options have changed between reference and incremental
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   34 Bit       Adders := 224   
+	   2 Input   33 Bit       Adders := 32    
+	   2 Input   32 Bit       Adders := 85    
+	   2 Input   17 Bit       Adders := 32    
+	   3 Input   16 Bit       Adders := 16    
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	             4096 Bit    Registers := 2     
+	              512 Bit    Registers := 39    
+	              256 Bit    Registers := 229   
+	               32 Bit    Registers := 19    
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Multipliers : 
+	              10x32  Multipliers := 1     
++---RAMs : 
+	           16384K Bit	(4096 X 4096 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 1     
+	   2 Input  256 Bit        Muxes := 457   
+	   2 Input   32 Bit        Muxes := 35    
+	   2 Input   16 Bit        Muxes := 96    
+	   8 Input    3 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 531   
+	   8 Input    1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 6840 (col length:120)
+BRAMs: 4320 (col length: RAMB18 360 RAMB36 180)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP genblk1[6].k1/genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[14].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[15].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[13].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[1].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[1].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[13].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[12].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[2].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[2].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[12].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[11].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[3].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[3].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[11].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[10].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[4].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[4].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[10].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[9].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[5].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[5].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[9].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[8].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[6].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[6].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[8].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[7].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[7].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[7].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[7].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[6].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[8].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[8].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[6].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[5].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[9].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[9].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[5].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[4].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[10].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[10].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[4].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[3].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[11].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[11].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[3].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[2].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[12].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[12].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[2].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[1].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[13].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[13].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[1].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].k1/genblk1[0].m1/tmp is absorbed into DSP genblk1[6].k1/genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk1[6].k1/genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[6].k1/genblk2[14].a1/tmp is absorbed into DSP genblk1[6].k1/genblk2[14].a1/tmp.
+DSP Report: operator genblk1[6].k1/genblk1[0].m1/tmp is absorbed into DSP genblk1[6].k1/genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[14].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[15].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[1].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[1].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[13].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[2].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[2].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[12].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[3].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[3].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[11].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[4].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[4].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[10].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[5].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[5].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[9].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[6].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[6].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[8].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[7].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[7].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[7].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[8].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[8].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[6].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[9].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[9].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[5].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[10].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[10].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[4].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[11].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[11].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[3].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[12].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[12].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[2].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[13].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[13].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[1].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[4].k1/genblk2[14].a1/tmp is absorbed into DSP genblk1[4].k1/genblk2[14].a1/tmp.
+DSP Report: operator genblk1[4].k1/genblk1[0].m1/tmp is absorbed into DSP genblk1[4].k1/genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[14].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[15].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[1].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[1].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[13].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[2].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[2].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[12].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[3].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[3].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[11].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[4].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[4].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[10].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[5].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[5].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[9].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[6].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[6].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[8].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[7].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[7].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[7].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[8].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[8].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[6].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[9].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[9].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[5].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[10].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[10].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[4].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[11].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[11].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[3].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[12].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[12].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[2].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[13].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[13].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[1].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk1[5].k1/genblk2[14].a1/tmp is absorbed into DSP genblk1[5].k1/genblk2[14].a1/tmp.
+DSP Report: operator genblk1[5].k1/genblk1[0].m1/tmp is absorbed into DSP genblk1[5].k1/genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[13].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[12].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[11].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[10].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[9].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[8].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[7].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[6].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[5].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[4].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[3].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[2].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[1].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk1[5].k1/genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].k1/genblk1[0].m1/tmp is absorbed into DSP genblk1[5].k1/genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[13].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[12].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[11].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[10].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[9].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[8].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[7].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[6].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[5].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[4].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[3].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[2].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[1].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk1[4].k1/genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].k1/genblk1[0].m1/tmp is absorbed into DSP genblk1[4].k1/genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[14].m1/tmp is absorbed into DSP genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[15].m1/tmp is absorbed into DSP genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[1].a1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[2].a1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[3].a1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[4].a1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[5].a1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[6].a1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[7].a1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[8].a1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[9].a1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[10].a1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[11].a1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[12].a1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[13].a1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[14].a1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[14].m1/tmp is absorbed into DSP genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[15].m1/tmp is absorbed into DSP genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[1].a1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[2].a1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[3].a1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[4].a1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[5].a1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[6].a1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[7].a1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[8].a1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[9].a1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[10].a1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[11].a1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[12].a1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[13].a1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[14].a1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[14].m1/tmp is absorbed into DSP genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[15].m1/tmp is absorbed into DSP genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[1].a1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[2].a1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[3].a1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[4].a1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[5].a1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[6].a1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[7].a1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[8].a1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[9].a1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[10].a1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[11].a1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[12].a1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[13].a1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[14].a1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[14].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[14].m1/tmp is absorbed into DSP genblk1[14].m1/tmp.
+DSP Report: Generating DSP genblk1[15].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[15].m1/tmp is absorbed into DSP genblk1[15].m1/tmp.
+DSP Report: Generating DSP genblk1[13].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk1[13].m1/tmp.
+DSP Report: Generating DSP genblk2[1].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[1].a1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: operator genblk1[13].m1/tmp is absorbed into DSP genblk2[1].a1/tmp.
+DSP Report: Generating DSP genblk1[12].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk1[12].m1/tmp.
+DSP Report: Generating DSP genblk2[2].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[2].a1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: operator genblk1[12].m1/tmp is absorbed into DSP genblk2[2].a1/tmp.
+DSP Report: Generating DSP genblk1[11].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk1[11].m1/tmp.
+DSP Report: Generating DSP genblk2[3].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[3].a1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: operator genblk1[11].m1/tmp is absorbed into DSP genblk2[3].a1/tmp.
+DSP Report: Generating DSP genblk1[10].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk1[10].m1/tmp.
+DSP Report: Generating DSP genblk2[4].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[4].a1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: operator genblk1[10].m1/tmp is absorbed into DSP genblk2[4].a1/tmp.
+DSP Report: Generating DSP genblk1[9].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk1[9].m1/tmp.
+DSP Report: Generating DSP genblk2[5].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[5].a1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: operator genblk1[9].m1/tmp is absorbed into DSP genblk2[5].a1/tmp.
+DSP Report: Generating DSP genblk1[8].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk1[8].m1/tmp.
+DSP Report: Generating DSP genblk2[6].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[6].a1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: operator genblk1[8].m1/tmp is absorbed into DSP genblk2[6].a1/tmp.
+DSP Report: Generating DSP genblk1[7].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk1[7].m1/tmp.
+DSP Report: Generating DSP genblk2[7].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[7].a1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: operator genblk1[7].m1/tmp is absorbed into DSP genblk2[7].a1/tmp.
+DSP Report: Generating DSP genblk1[6].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk1[6].m1/tmp.
+DSP Report: Generating DSP genblk2[8].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[8].a1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: operator genblk1[6].m1/tmp is absorbed into DSP genblk2[8].a1/tmp.
+DSP Report: Generating DSP genblk1[5].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk1[5].m1/tmp.
+DSP Report: Generating DSP genblk2[9].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[9].a1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: operator genblk1[5].m1/tmp is absorbed into DSP genblk2[9].a1/tmp.
+DSP Report: Generating DSP genblk1[4].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk1[4].m1/tmp.
+DSP Report: Generating DSP genblk2[10].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[10].a1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: operator genblk1[4].m1/tmp is absorbed into DSP genblk2[10].a1/tmp.
+DSP Report: Generating DSP genblk1[3].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk1[3].m1/tmp.
+DSP Report: Generating DSP genblk2[11].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[11].a1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: operator genblk1[3].m1/tmp is absorbed into DSP genblk2[11].a1/tmp.
+DSP Report: Generating DSP genblk1[2].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk1[2].m1/tmp.
+DSP Report: Generating DSP genblk2[12].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[12].a1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: operator genblk1[2].m1/tmp is absorbed into DSP genblk2[12].a1/tmp.
+DSP Report: Generating DSP genblk1[1].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk1[1].m1/tmp.
+DSP Report: Generating DSP genblk2[13].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[13].a1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: operator genblk1[1].m1/tmp is absorbed into DSP genblk2[13].a1/tmp.
+DSP Report: Generating DSP genblk1[0].m1/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk1[0].m1/tmp.
+DSP Report: Generating DSP genblk2[14].a1/tmp, operation Mode is: C+A*B.
+DSP Report: operator genblk2[14].a1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: operator genblk1[0].m1/tmp is absorbed into DSP genblk2[14].a1/tmp.
+DSP Report: Generating DSP genblk1[8].psig1/CoeffMult/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[8].psig1/CoeffMult/tmp is absorbed into DSP genblk1[8].psig1/CoeffMult/tmp.
+DSP Report: operator genblk1[8].psig1/CoeffMult/tmp is absorbed into DSP genblk1[8].psig1/CoeffMult/tmp.
+DSP Report: Generating DSP genblk1[8].psig1/CoeffMult/tmp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[8].psig1/CoeffMult/tmp is absorbed into DSP genblk1[8].psig1/CoeffMult/tmp.
+DSP Report: operator genblk1[8].psig1/CoeffMult/tmp is absorbed into DSP genblk1[8].psig1/CoeffMult/tmp.
+DSP Report: Generating DSP genblk1[7].psig1/CoeffMult/tmp, operation Mode is: A*B.
+DSP Report: operator genblk1[7].psig1/CoeffMult/tmp is absorbed into DSP genblk1[7].psig1/CoeffMult/tmp.
+DSP Report: operator genblk1[7].psig1/CoeffMult/tmp is absorbed into DSP genblk1[7].psig1/CoeffMult/tmp.
+DSP Report: Generating DSP genblk1[7].psig1/CoeffMult/tmp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator genblk1[7].psig1/CoeffMult/tmp is absorbed into DSP genblk1[7].psig1/CoeffMult/tmp.
+DSP Report: operator genblk1[7].psig1/CoeffMult/tmp is absorbed into DSP genblk1[7].psig1/CoeffMult/tmp.

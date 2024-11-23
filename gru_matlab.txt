@@ -1,0 +1,74 @@
+% Read the weight matrices from the model file
+input_kernel = h5read('indy_20160624_03_kinematic_LFP_raw_GRU__fold_0.h5', '/model_weights/gru/gru/gru_cell/kernel:0');
+recurrent_kernel = h5read('indy_20160624_03_kinematic_LFP_raw_GRU__fold_0.h5', '/model_weights/gru/gru/gru_cell/recurrent_kernel:0');
+gru_bias = h5read('indy_20160624_03_kinematic_LFP_raw_GRU__fold_0.h5', '/model_weights/gru/gru/gru_cell/bias:0');
+
+regression_kernel = h5read('indy_20160624_03_kinematic_LFP_raw_GRU__fold_0.h5', '/model_weights/regression_output/regression_output/kernel:0');
+regression_bias = h5read('indy_20160624_03_kinematic_LFP_raw_GRU__fold_0.h5', '/model_weights/regression_output/regression_output/bias:0');
+
+% Define some model parameters
+gru_size = floor(size(input_kernel,1)/3);
+regression_size = size(regression_kernel,1);
+
+% Define anon functions for sigmoid and tanh functions
+sigmoid = @(x) 1 ./ (1 + exp(-1.*x));
+tanh = @(x) (exp(x) - exp(-1.*x))./(exp(-1.*x) + exp(x));
+
+% Load in the test inputs
+load('indy_20160624_03_kinematic_LFP_raw_GRU_model_test_inputs.mat');
+load('indy_20160624_03_kinematic_LFP_raw_GRU_model_test_outputs_state_zero.mat');
+
+% The test inputs and outputs are formatted as 3D arrays
+% The dimensions orders denote: batch x time steps x inputs
+
+% Get the first batch inputs
+regression_outputs = zeros(2, size(test_inputs,1));
+k = 1;
+for batch_number = 1 : size(test_inputs,1)
+    batch_inputs = squeeze(test_inputs(batch_number, :, :));
+    
+    % Start the cell state as zero for each batch
+    gru_state = zeros(1, gru_size);
+
+    for t = 1 : size(test_inputs,2)
+        % 1. Compute the weighted inputs and weighted kernel
+        weighted_inputs = (batch_inputs(t,:) * input_kernel') + gru_bias(:,1)';
+        weighted_kernel = (gru_state * recurrent_kernel') + gru_bias(:, 2)';
+
+        % 1.5 Separate the update gate (z), reset gate (r), and hidden gate (h)
+        x_z = weighted_inputs(1, 1:gru_size);
+        r_z = weighted_kernel(1, 1:gru_size);
+
+        x_r = weighted_inputs(1, gru_size+1:2*gru_size);
+        r_r = weighted_kernel(1, gru_size+1:2*gru_size);
+
+        x_h = weighted_inputs(1, 2*gru_size+1:3*gru_size);
+        r_h = weighted_kernel(1, 2*gru_size+1:3*gru_size);
+
+
+        % 2. Compute the reset and update gates (add the bias as well)
+        z = sigmoid(x_z + r_z);
+        r = sigmoid(x_r + r_r);
+
+        % 3. Compute the current cell state
+        hh = tanh(x_h + r.*r_h);
+
+        % 4. Compute the next cell state
+        next_state = z .* gru_state + ((1 - z) .* hh);
+
+        % Update the gru state
+        gru_state = next_state;
+
+        % 5. Compute the output regression. Applying regression kernel to the gru
+        % state
+        weighted_gru_state = gru_state * regression_kernel';
+
+        % 6. Add the bias to finalize regression output
+        regression_outputs(:, k) = weighted_gru_state + regression_bias';
+        k = k + 1;
+    end
+end
+
+% Compute the MSE
+mean_squared_error = mean((regression_outputs - test_outputs).^2, 2);
+fprintf("MSE dimension 1: %f\nMSE dimension 2: %f\n", mean_squared_error(1), mean_squared_error(2));

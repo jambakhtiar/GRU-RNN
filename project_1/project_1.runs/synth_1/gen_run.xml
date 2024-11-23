@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcu200-fsgd2104-2-e" LaunchTime="1724048028" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/RAM_P.dcp">
+  <File Type="VDS-TIMING-PB" Name="gru_cell_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="gru_cell_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="gru_cell.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="gru_cell_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="gru_cell_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="gru_cell_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="gru_cell.vds"/>
+  <File Type="REPORTS-TCL" Name="gru_cell_reports.tcl"/>
+  <File Type="PA-TCL" Name="gru_cell.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/FixedPoint_Adder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/FixedPoint_Adder.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/FixedPoint_Extend_Unsigned.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/FixedPoint_Extend_Unsigned.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/FixedPoint_Multiplier.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/FixedPoint_Multiplier.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/FixedPoint_Sub.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/PSigmoid.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/PSigmoid.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/RAM_P.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/RAM_P.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/TwosComp.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/TwosComp.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/abs.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/abs.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/activation_function.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/activation_function.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/adder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/adder.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/bias_add.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/bias_add.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/columnwise_mvm.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/columnwise_mvm.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/control_unit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/control_unit.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/elementwise_add.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/elementwise_add.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/elementwise_mult.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/elementwise_mult.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/elementwise_quant.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/elementwise_quant.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/elementwise_sub.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/elementwise_sub.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/kernel.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/kernel.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/mult.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/mult.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/quant.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/quant.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/register_file.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/register_file.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/register_file_r_z.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/register_file_r_z.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/segCoeffROM_logsig.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/segCoeffROM_tanh.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/segmentDetector_General.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/segmentDetector_General.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/sub.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/sub.v"/>
+        <Attr Name="ImportTime" Val="1723754400"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rani_koneru-attachments/gru_cell.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rani_koneru-attachments/gru_cell.v"/>
+        <Attr Name="ImportTime" Val="1723754412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="gru_cell"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/RAM_P.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

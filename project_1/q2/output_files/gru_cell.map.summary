@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Aug 19 14:19:43 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : gru_cell
+Top-level Entity Name : gru_cell
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 79804
+Total pins : 770
+Total virtual pins : 0
+Total block memory bits : 37,748,736
+Total DSP Blocks : 312
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

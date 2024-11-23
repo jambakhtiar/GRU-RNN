@@ -1,0 +1,135 @@
+Archive Project report for gru_cell
+Mon Aug 19 21:21:49 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon Aug 19 21:21:49 2024 ;
+; Revision Name          ; gru_cell                              ;
+; Top-level Entity Name  ; gru_cell                              ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory /home/jam/Downloads/GRU/project_1/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/home/jam/Downloads/GRU/project_1/q2/gru_cell.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'gru_cell.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/jam/altera/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 660 megabytes
+    Info: Processing ended: Mon Aug 19 21:21:49 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Files Archived                                                                                                          ;
++-------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------------+
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/abs.v                                                       ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/activation_function.v                                       ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v                                                     ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/bias_add.v                                                  ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/columnwise_mvm.v                                            ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/control_unit.v                                              ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_add.v                                           ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_mult.v                                          ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_quant.v                                         ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_sub.v                                           ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Adder.v                                          ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Extend_Unsigned.v                                ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Multiplier.v                                     ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v                                            ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/gru_cell.v                                                  ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/kernel.v                                                    ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v                                                      ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v                                                  ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/quant.v                                                     ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/RAM_P.v                                                     ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file.v                                             ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file_r_z.v                                         ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v                                        ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v                                          ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/segmentDetector_General.v                                   ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/sub.v                                                       ;
+; ../project_1.srcs/sources_1/imports/rani_koneru-attachments/TwosComp.v                                                  ;
+; /home/jam/altera/quartus/linux64/assignment_defaults.qdf                                                                ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/gru_bias.txt                                                           ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/abs.v                        ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/activation_function.v        ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/adder.v                      ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/bias_add.v                   ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/columnwise_mvm.v             ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/control_unit.v               ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_add.v            ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_mult.v           ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_quant.v          ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/elementwise_sub.v            ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Adder.v           ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Extend_Unsigned.v ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Multiplier.v      ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/FixedPoint_Sub.v             ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/gru_cell.v                   ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/kernel.v                     ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/mult.v                       ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/PSigmoid.v                   ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/quant.v                      ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/RAM_P.v                      ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file.v              ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/register_file_r_z.v          ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_logsig.v         ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segCoeffROM_tanh.v           ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/segmentDetector_General.v    ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/sub.v                        ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/sources_1/imports/rani_koneru-attachments/TwosComp.v                   ;
+; /home/jam/Downloads/GRU/project_1/project_1.srcs/weight_matrix.txt                                                      ;
+; gru_cell.qpf                                                                                                            ;
+; gru_cell.qsf                                                                                                            ;
++-------------------------------------------------------------------------------------------------------------------------+
+
+

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Aug 19 11:13:51 2024
+# Process ID: 10484
+# Current directory: /home/jam/Downloads/GRU/project_1/project_1.runs/synth_1
+# Command line: vivado -log gru_cell.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gru_cell.tcl
+# Log file: /home/jam/Downloads/GRU/project_1/project_1.runs/synth_1/gru_cell.vds
+# Journal file: /home/jam/Downloads/GRU/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: jam-Precision-5510, OS: Linux, CPU Frequency: 3319.878 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+source gru_cell.tcl -notrace
